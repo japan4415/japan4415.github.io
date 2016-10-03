@@ -1,44 +1,100 @@
 <html>
     <head>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">        
+        <link href="umi/css/bootstrap.min.css" rel="stylesheet">        
         <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="umi/js/bootstrap.min.js"></script>
+        <style>
+            body { padding-top: 70px; }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default bg-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">discordのポートフォリオ</a>
+                    <a class="navbar-brand" href="#kb">Yoshihiko Kato a.k.a. discord</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#kb">研究分野</a></li>
+                <ul class="nav navbar-nav" id="menu">
+                    <li><a href="#js">自己紹介</a></li>
+                    <li><a href="#kb">研究分野</a></li>
                     <li><a href="#ks">個人的な趣味</a></li>
+                    <li><a href="#jr">受賞歴</a></li>
                     <li><a href="#it">今まで作ったもの</a></li>
                 </ul>
             </div>
         </nav>
         <div class="container">
+            <div id="js">
+                <h1>自己紹介</h1>
+                    <h2>経歴</h2>
+                        <p>
+                            2016年 電気通信大学大学院博士課程前期入学
+                        </p>
+            </div>
             <div id="kb">
                 <h1>研究分野</h1>
-                <h2>現在の研究テーマ</h2>
-                <h3>機械学習</h3>
-                    <p>
-                        物事をプログラムで分類することにとても興味があります。
-                        これは何でもかんでも自動化するという癖からきているものです。
-                    </p>
+                    <h2>現在の研究テーマ</h2>
+                        <h3>ニューラルネットワークのモデルの研究</h3>
+                        <p>
+                            近年、様々な分野で注目されているニューラルネットワークですが、<br>
+                            分類のためのモデル生成の際に、膨大な量の学習データが必要である点や、学習に際する計算量のリソースが膨大である点が欠点として挙げられます。<br>
+                            以上の2点を解決するため、他の分類に使用したモデルの転用の研究を行っております。<br>
+                            もし、複数事象に対応したモデルを作成することができれば、汎用人工知能への応用も考えられる分野なので、やりがいがあります。
+                        </p>
+                    <h2>過去の研究テーマ</h2>
+                        <h3>検索結果の可視化</h3>
+                        <p>
+                            近年、検索結果の表示手法に箇条書き形式の手法が使用されています。<br>
+                            この手法は、検索結果の提示するWebページ一つ一つの内容を理解するのには向いていますが、複数のWebページ同士の関係性を理解するのには向いていません。<br>
+                            その結果、目的のWebページを見つけるまで一つ一つのWebページを開いて、取捨選択する手間がかかってしまいます。<br>
+                            そこで、私は、Webページ間の関係を可視化して提示する検索結果の提示手法について研究を行いました。
+                        </p>
             </div>
-            <div class="ks">
+            <div id="ks">
                 <h1>個人的な趣味</h1>
-                <h2>現在の趣味</h2>
-                <h3>League of Legends</h3>
-                    <p>
-                        現在はKingdomというチームに所属し、ヘッドコーチを努めさせていただいております。<br>
-                        トップチームの試合を全て見て、自分のチームに取り入れられる点を取り入れるということをひたすら繰り返しています。
-                    </p>
-                <h2>過去の趣味</h2>
+                    <h2>現在の趣味</h2>
+                        <h3>ハッカソン</h3>
+                            <p>
+                                短期間で集中して一つのものを作るというコンセプトが自分のモノづくりスタイルに合っており、<br>
+                                「UEC InSilico」というチームを立ち上げ、様々なハッカソンに参加させていただいております。
+                            </p>
+                        <h3>League of Legends</h3>
+                            <p>
+                                現在はKingdomというチームに所属し、ヘッドコーチを努めさせていただいております。<br>
+                                トップチームの試合を全て見て、自分のチームに取り入れられる点を取り入れるということをひたすら繰り返しています。
+                            </p>
+                    <h2>過去の趣味</h2>
+                        <h3>バスケットボール</h3>
+                            <p>
+                                高校時代からバスケットボールに魅せられ、大学から部活に所属し、主将として活動させていただきました。<br>
+                                試合中にしてしまった怪我の後遺症で、現在は全力でプレーすることはできませんが、「バスケするよ」と誘われたら飛んで行く人間です。
+                            </p>
             </div>
-            <div class="it">
+            <div id="jr">
+                <h1>受賞歴</h1>
+                <h2>論文関連</h2>
+                <h2>ハッカソン</h2>
+                    <h3>Hacker Wars(2015年)</h3>
+                    <p>
+                        研究室の先輩に誘われ、RedImpulseの方々に混ぜていただいて出場し、お母さんの為の息子・パパが帰る時間管理システム「OKAN」の開発を行いました。<br>
+                        シンプルな機能を評価いただき、アカツキ賞、freee賞をいただきました。
+                    </p>
+                    <h3>Hack U東京会場(2016年)</h3>
+                    <p>
+                        UEC InSilico結成後2戦目のハッカソン参加となり、1戦目であったHack U電気通信大学会場の雪辱を晴らすために出場しました。<br>
+                        テーマが「自動◯◯」だったので、自動で行くべき飯屋を検索し、方向だけを提示する「GO飯」というアプリを制作しました。<br>
+                        イヤホンジャックを用いた物理モジュールや、コンセプトが評価され、最優秀賞、Happy Hacking賞をいただきました。
+                    </p>
+                    <h3>湯けむりハッカソン(2016年)</h3>
+                    <p>
+                        現地でチームのマッチングが行われる、単体参加のハッカソンに初挑戦する意味で出場しました。<br>
+                        テーマが「エンジニア・デザイナーの問題を解決する」だったので、<br>
+                        初対面のエンジニアがWebアプリを作るのにどの知識が足りないかを視覚的に認識できるWebアプリを制作しました。<br>
+                        コンセプトの一貫性が評価され、最優秀賞をいただきました。
+                    </p>
+            </div>
+            
+            <div id="it">
                 <h1>今まで作ったもの</h1>
                 <h2>現在作っているもの</h2>
                 <h3>LoL Brain</h3>
@@ -50,12 +106,12 @@
         </div>
         <script>
             $(function () {
-            $('a[href^=#]').click(function () {
-                var href = $(this).attr("href"),
-                    target = $(href === "#" || href === "" ? 'html' : href);
-                target.velocity("scroll", { duration: 1200, easing: "ease" });
-                return false;
-            });
+                $('a[href^="#"]').click(function () {
+                    var href = $(this).attr("href"),
+                        target = $(href === "#" || href === "" ? 'html' : href);
+                    target.velocity("scroll", { duration: 1200, easing: "ease", offset:-100});
+                    return false;
+                });
             });
         </script>
     </body>
