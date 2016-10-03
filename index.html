@@ -2,6 +2,7 @@
     <head>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">        
         <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -11,17 +12,51 @@
                     <a class="navbar-brand">discordのポートフォリオ</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="kb">研究分野</a></li>
-                    <li><a href="#">個人的な趣味</a></li>
-                    <li><a href="#">今まで作ったもの</a></li>
+                    <li class="active"><a href="#kb">研究分野</a></li>
+                    <li><a href="#ks">個人的な趣味</a></li>
+                    <li><a href="#it">今まで作ったもの</a></li>
                 </ul>
             </div>
         </nav>
         <div class="container">
             <div id="kb">
-                私の研究分野はこれです
+                <h1>研究分野</h1>
+                <h2>現在の研究テーマ</h2>
+                <h3>機械学習</h3>
+                    <p>
+                        物事をプログラムで分類することにとても興味があります。
+                        これは何でもかんでも自動化するという癖からきているものです。
+                    </p>
             </div>
-            自己紹介ページになる予定です
+            <div class="ks">
+                <h1>個人的な趣味</h1>
+                <h2>現在の趣味</h2>
+                <h3>League of Legends</h3>
+                    <p>
+                        現在はKingdomというチームに所属し、ヘッドコーチを努めさせていただいております。<br>
+                        トップチームの試合を全て見て、自分のチームに取り入れられる点を取り入れるということをひたすら繰り返しています。
+                    </p>
+                <h2>過去の趣味</h2>
+            </div>
+            <div class="it">
+                <h1>今まで作ったもの</h1>
+                <h2>現在作っているもの</h2>
+                <h3>LoL Brain</h3>
+                    <p>
+                        Deep Learningを使ったLoL勝敗予測アルゴリズムの開発を趣味程度に行っております。
+                    </p>
+                <h2>過去の趣味</h2>
+            </div>
         </div>
+        <script>
+            $(function () {
+            $('a[href^=#]').click(function () {
+                var href = $(this).attr("href"),
+                    target = $(href === "#" || href === "" ? 'html' : href);
+                target.velocity("scroll", { duration: 1200, easing: "ease" });
+                return false;
+            });
+            });
+        </script>
     </body>
 </html>
