@@ -11,11 +11,10 @@
     <body>
         <nav class="navbar navbar-default bg-inverse navbar-fixed-top" role="navigation">
             <div class="container">
-                <div class="navbar-header">
+                <div class="navbar-header">      
                     <a class="navbar-brand" href="#top">Yoshihiko Kato a.k.a. discord</a>
                 </div>
                 <ul class="nav navbar-nav" id="menu">
-                    <li><a href="#js">自己紹介</a></li>
                     <li><a href="#kb">研究分野</a></li>
                     <li><a href="#ks">個人的な趣味</a></li>
                     <li><a href="#jr">受賞歴</a></li>
@@ -25,14 +24,19 @@
         </nav>
         <div class="container">
             <div id="top"></div>
-            <div id="js">
-                <h1>自己紹介</h1>
-                    <h2>経歴</h2>
+            <div id="js" class="col-lg-12">
+                <h1>加藤慶彦 Yoshihiko Kato</h1>
+                    <div id="photo" class="col-lg-3">
+                        <img src="img/photo2.jpg" class="img-responsive"/>
+                    </div>
+                    <div id="contents" class="col-lg-9">
+                        <h2>経歴</h2>
                         <p>
                             2016年 電気通信大学大学院博士課程前期入学
                         </p>
+                    </div>
             </div>
-            <div id="kb">
+            <div id="kb" class="col-lg-12">
                 <h1>研究分野</h1>
                     <h2>現在の研究テーマ</h2>
                         <h3>ニューラルネットワークのモデルの研究</h3>
@@ -45,13 +49,16 @@
                     <h2>過去の研究テーマ</h2>
                         <h3>検索結果の可視化</h3>
                         <p>
+                            
                             近年、検索結果の表示手法に箇条書き形式の手法が使用されています。<br>
-                            この手法は、検索結果の提示するWebページ一つ一つの内容を理解するのには向いていますが、複数のWebページ同士の関係性を理解するのには向いていません。<br>
+                            この手法は、検索結果の提示するWebページ一つ一つの内容を理解するのには向いていますが、<br>
+                            複数のWebページ同士の関係性を理解するのには向いていません。<br>
                             その結果、目的のWebページを見つけるまで一つ一つのWebページを開いて、取捨選択する手間がかかってしまいます。<br>
                             そこで、私は、Webページ間の関係を可視化して提示する検索結果の提示手法について研究を行いました。
                         </p>
+                        <img src="img/1.png" class="img-responsive" width=70%/>
             </div>
-            <div id="ks">
+            <div id="ks" class="col-lg-12">
                 <h1>個人的な趣味</h1>
                     <h2>現在の趣味</h2>
                         <h3>ハッカソン</h3>
@@ -74,13 +81,14 @@
                                 試合中にしてしまった怪我の後遺症で、現在は全力でプレーすることはできませんが、「バスケするよ」と誘われたら飛んで行く人間です。
                             </p>
             </div>
-            <div id="jr">
+            <div id="jr" class="col-lg-12">
                 <h1>受賞歴</h1>
                 <h2>論文関連</h2>
                 <h2>ハッカソン</h2>
                     <h3>Hacker Wars(2015年)</h3>
                     <p>
-                        研究室の先輩に誘われ、RedImpulseの方々に混ぜていただいて出場し、お母さんの為の息子・パパが帰る時間管理システム「OKAN」の開発を行いました。<br>
+                        研究室の先輩に誘われ、RedImpulseの方々に混ぜていただいて出場し、<br>
+                        お母さんの為の息子・パパが帰る時間管理システム「OKAN」の開発を行いました。<br>
                         シンプルな機能を評価いただき、アカツキ賞、freee賞をいただきました。<br>
                         Hacker WarsのWebページ:<a href="http://hackerwars.goodfind.jp/" target="_blank">http://hackerwars.goodfind.jp/</a>
                     </p>
@@ -101,14 +109,14 @@
                     </p>
             </div>
             
-            <div id="it">
+            <div id="it" class="col-lg-12">
                 <h1>制作物</h1>
-                <h2>過去に作ったもの</h2>
-                <h2>現在作っているもの</h2>
-                <h3>LoL Brain</h3>
-                    <p>
-                        Deep Learningを使ったLoL勝敗予測アルゴリズムの開発を趣味程度に行っております。
-                    </p>
+                    <h2>過去に作ったもの</h2>
+                    <h2>現在作っているもの</h2>
+                        <h3>LoL Brain</h3>
+                            <p>
+                                Deep Learningを使ったLoL勝敗予測アルゴリズムの開発を趣味程度に行っております。
+                            </p>
             </div>
         </div>
         <script>
@@ -116,7 +124,7 @@
                 $('a[href^="#"]').click(function () {
                     var href = $(this).attr("href"),
                         target = $(href === "#" || href === "" ? 'html' : href);
-                    target.velocity("scroll", { duration: 1200, easing: "ease", offset:-100});
+                    target.velocity("scroll", { duration: 1200, easing: "ease", offset:-70});
                     return false;
                 });
             });
