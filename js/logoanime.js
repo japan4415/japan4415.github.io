@@ -26,7 +26,8 @@ $(function() {
 
         // アニメーション描画
         $path
-             .velocity({ strokeDashoffset : 0 }, 300 , "swing")
+             .velocity({ strokeDashoffset : 0 }, 500 , "swing")
              .velocity({ fill: "#4aa3df" }, 1000 , "swing");
     });
 });
+
