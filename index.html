@@ -1,46 +1,67 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <link href="umi/css/bootstrap.min.css" rel="stylesheet">        
-        <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.js"></script>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="umi/js/bootstrap.min.js"></script>
+        <script src="js/scroll.js"></script>
         <style>
-            body { padding-top: 70px; }
+            body {
+                padding-top: 70px;
+            }
+            .move {
+                margin-top: -70px;
+                padding-top: 70px;
+            }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-default bg-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">      
-                    <a class="navbar-brand" href="#top">Yoshihiko Kato a.k.a. discord</a>
+        <header>
+            <nav class="navbar navbar-default bg-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">   
+                        <a class="navbar-brand" href="#top">Yoshihiko Kato a.k.a. discord</a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="top-nav">
+                        <ul class="nav navbar-nav" id="menu">
+                            <li><a href="#kb">研究分野</a></li>
+                            <li><a href="#ks">個人的な趣味</a></li>
+                            <li><a href="#jr">受賞歴</a></li>
+                            <li><a href="#it">制作物</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="nav navbar-nav" id="menu">
-                    <li><a href="#kb">研究分野</a></li>
-                    <li><a href="#ks">個人的な趣味</a></li>
-                    <li><a href="#jr">受賞歴</a></li>
-                    <li><a href="#it">制作物</a></li>
-                </ul>
-            </div>
-        </nav>
+            </nav>
+        </header>
         <div class="container">
-            <div id="top"></div>
-            <div id="js" class="col-lg-12">
+            <div id="top" class="move"></div>
+            <div id="js" class="col-lg-12 move">
                 <h1>加藤慶彦 Yoshihiko Kato</h1>
-                    <div id="js-photo" class="col-lg-3">
+                    <div id="js-photo" class="col-lg-3 col-xs-4">
                         <img src="img/photo2.png" class="img-responsive"/>
                     </div>
-                    <div id="js-contents" class="col-lg-9">
+                    <div id="js-contents" class="col-lg-9 col-xs-8">
                         <h2>経歴</h2>
                         <p>
-                            2015年 電気通信大学情報理工学部卒業<br>
-                            2016年 電気通信大学情報理工学研究科博士前期課程入学
+                            2016年 電気通信大学情報理工学部卒業<br>
+                            2018年 電気通信大学情報理工学研究科博士前期課程卒業
                         </p>
                     </div>
             </div>
-            <div id="kb" class="col-lg-12">
+            <div id="kb" class="col-lg-12 col-xs-12 move">
                 <h1>研究分野</h1>
                     <div id="kb-g" class="col-lg-12">
                         <h2>現在の研究テーマ</h2>
+                            <h3>エージェントの協調行動の獲得の研究</h3>
+                            <p>
+                                近年，AI技術の発展によって様々な種類のロボットが社会に受け入れられるようになってきており，<br>
+                                特にサービス業
+                            </p>
                             <h3>マルチモーダルな入力に対しての脳を模したAIの実装の研究</h3>
                             <p>
                                 近年、様々な分野で注目されているニューラルネットワークを用いたAIですが、<br>
@@ -65,7 +86,7 @@
                             <img src="img/1.png" class="img-responsive" width=70%/>
                     </div>
             </div>
-            <div id="ks" class="col-lg-12">
+            <div id="ks" class="col-lg-12 col-xs-12 move">
                 <h1>個人的な趣味</h1>
                     <div id="ks-g" class="col-lg-12">
                         <h2>現在の趣味</h2>
@@ -95,7 +116,7 @@
                                 <img src="img/basketball.png" class="img-responsive" width=40%/>
                     </div>
             </div>
-            <div id="jr" class="col-lg-12">
+            <div id="jr" class="col-lg-12 col-xs-12 move">
                 <h1>業績</h1>
                     <div id="jr-r" class="col-lg-12">
                         <h2>論文</h2>
@@ -143,7 +164,7 @@
                     </div>
             </div>
             
-            <div id="it" class="col-lg-12">
+            <div id="it" class="col-lg-12 col-xs-12 move">
                 <h1>制作物</h1>
                     <div id="it-k" class="col-lg-12">
                         <h2>過去に作ったもの</h2>
@@ -157,15 +178,5 @@
                     </div>
             </div>
         </div>
-        <script>
-            $(function () {
-                $('a[href^="#"]').click(function () {
-                    var href = $(this).attr("href"),
-                        target = $(href === "#" || href === "" ? 'html' : href);
-                    target.velocity("scroll", { duration: 1200, easing: "ease", offset:-70});
-                    return false;
-                });
-            });
-        </script>
     </body>
 </html>
