@@ -1,5 +1,12 @@
 html{
     scroll-behavior: smooth;
+}
 
-
+.anchor-target::before {
+    content: "";
+    display: block;
+    height: 87.99px;
+    margin-top: -87.99px;
+    visibility: hidden;
+    pointer-events: none;
 }
