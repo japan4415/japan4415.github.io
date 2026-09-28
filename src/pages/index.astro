@@ -8,17 +8,36 @@ import Research from '../components/Research.astro';
 import Hobbies from '../components/Hobbies.astro';
 import Awards from '../components/Awards.astro';
 import Works from '../components/Works.astro';
+
+const year = new Date().getFullYear();
 ---
 
 <Layout>
   <Navbar />
-  <div>
-    <Profile />
-    <Interest />
-    <WorkHistory />
-    <Research />
-    <Hobbies />
-    <Awards />
-    <Works />
-  </div>
+  <main>
+    <section id="top" class="bg-white">
+      <Profile />
+    </section>
+    <section id="it" class="anchor-target bg-gray-50">
+      <Interest />
+    </section>
+    <section id="wh" class="anchor-target bg-white">
+      <WorkHistory />
+    </section>
+    <section id="kb" class="anchor-target bg-gray-50">
+      <Research />
+    </section>
+    <section id="ks" class="anchor-target bg-white">
+      <Hobbies />
+    </section>
+    <section id="jr" class="anchor-target bg-gray-50">
+      <Awards />
+    </section>
+    <section id="works" class="anchor-target bg-white">
+      <Works />
+    </section>
+  </main>
+  <footer class="bg-blue-600 text-white py-8 text-center">
+    <p>&copy; {year} Yoshihiko Kato. All rights reserved.</p>
+  </footer>
 </Layout>
