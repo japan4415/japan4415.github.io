@@ -33,7 +33,6 @@
   const menu = document.getElementById('menu');
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
-      const isOpen = !menu.classList.contains('hidden') || menu.classList.contains('md:flex');
       if (menu.classList.contains('hidden') && !window.matchMedia('(min-width: 768px)').matches) {
         menu.classList.remove('hidden');
         menu.classList.add('flex');

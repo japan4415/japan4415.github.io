@@ -9,11 +9,6 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.anchor-target::before {
-  content: "";
-  display: block;
-  height: 87.99px;
-  margin-top: -87.99px;
-  visibility: hidden;
-  pointer-events: none;
+.anchor-target {
+  scroll-margin-top: 4rem;
 }
